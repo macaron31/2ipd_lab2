@@ -17,23 +17,27 @@ int main()
 
 	int minNum = 0;
 	int maxNum = 0;
+	int minNumIndex = 0;
+	int maxNumIndex = 0;
 
 	for (int i = 0; i < ARRSIZE; i++)
 	{
 		if (arr[i] < minNum || i == 0)
 		{
+			minNumIndex = i;
 			minNum = arr[i];
 		}
 
 		if (arr[i] > maxNum || i == 0)
 		{
+			maxNumIndex = i;
 			maxNum = arr[i];
 		}
 
 	}
 
-	cout << "Минимальное число будет: " << minNum << endl;
-	cout << "Максимальное число будет: " << maxNum << endl;
+	cout << "Минимальное число будет: " << minNum << ",и его индекс" << minNumIndex << endl;
+	cout << "Максимальное число будет: " << maxNum << ",и его индекс" << maxNumIndex << endl;
 
 }
 
